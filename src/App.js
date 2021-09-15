@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import faker from "faker";
 import './App.css';
+import Comment from './components/Comment';
+import ApprovalCards from './components/ApprovalCards';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ui container comments">
+      <div>
+        <Comment randomName={faker.name.findName()} randomImage={faker.image.avatar()} comment={faker.lorem.sentence()}/>
+        <Comment randomName={faker.name.findName()} randomImage={faker.image.avatar()} comment={faker.lorem.sentence()}/>
+        <Comment randomName={faker.name.findName()} randomImage={faker.image.avatar()} comment={faker.lorem.sentence()}/>
+        <Comment randomName={faker.name.findName()} randomImage={faker.image.avatar()} comment={faker.lorem.sentence()}/>
+        <Comment randomName={faker.name.findName()} randomImage={faker.image.avatar()} comment={faker.lorem.sentence()}/>
+        <Comment randomName={faker.name.findName()} randomImage={faker.image.avatar()} comment={faker.lorem.sentence()}/>
+      </div>
+      <ApprovalCards />
     </div>
   );
 }
